@@ -93,7 +93,7 @@ class HandleCollisionsAction(Action):
                     scoreA.add_points(constants.POINTS)              
                     self._who_losted = "CYCLE B"
        
-                  
+        return self._is_game_over        
          
         
     def _handle_game_over(self, cast, script):

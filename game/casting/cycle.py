@@ -50,12 +50,13 @@ class Cycle(Actor):
             offset = velocity.reverse()
             position = tail.get_position().add(offset)
             
-            segment = Actor()
-            segment.set_position(position)
-            segment.set_velocity(velocity)
-            segment.set_text("#")
-            segment.set_color(self._cycle_color)
-            self._segments.append(segment)
+            
+        segment = Actor()
+        segment.set_position(position)
+        segment.set_velocity(velocity)
+        segment.set_text("#")
+        segment.set_color(self._cycle_color)
+        self._segments.append(segment)
     
     def turn_head(self, velocity):
         # set velocity to turn the cycle head

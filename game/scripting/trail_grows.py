@@ -8,8 +8,12 @@ class TrailGrows(Action):
     Attributes:
         _is_game_over (boolean): Whether or not the game is over.
     """
-    def __init__(self) -> None:
-        super().__init__()
+    def __init__(self):
+        """Constructs a new TrailGrows using
+        
+        Args:
+            _is_game_over: Bollean
+        """   
         self._is_game_over = False  
     
     def set_is_game_over(self, is_game_over):
@@ -30,5 +34,5 @@ class TrailGrows(Action):
         if not self._is_game_over:
             cycle_one = cast.get_first_actor("CYCLE A")
             cycle_two = cast.get_first_actor("CYCLE B")
-            cycle_one.grow_tail(1)
-            cycle_two.grow_tail(1)
+            cycle_one.grow_tail(100)
+            cycle_two.grow_tail(100)
